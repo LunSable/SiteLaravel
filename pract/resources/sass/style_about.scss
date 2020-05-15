@@ -1,0 +1,38 @@
+
+$body-font : 'fira_sansregular', Helvetica, serif;
+
+$blue:#33c1e3;
+$gray:#727272;
+$red:#e85f61;
+$white:#f6f6f6;
+$darkgray:#414141;
+$whitegray:#dedede;
+$green:#9e1c1c;
+
+
+// /*Миксы*/
+@import "../sass/other/Color.scss";
+@import "../sass/plugins/css/all.min.css";
+@import "../sass/other/mixins.scss";
+
+
+// /*Шрифт*/
+@import "../sass/other/fonts.scss";
+
+// /* Настройки лейаута */
+@import "../sass/other/normalize.scss";
+@import "../sass/other/base.scss";
+@import "../sass/adaptive/media.scss";
+
+// // /* Компоненты */
+@import "../sass/components/header.scss";
+@import "../sass/components/footer.scss";
+@import "../sass/components/sidebar.scss";
+
+
+// // /* Страницы */
+@import "../sass/pages/books.scss";
+@import "../sass/pages/admin.scss"
+
+
+// /* анимации */

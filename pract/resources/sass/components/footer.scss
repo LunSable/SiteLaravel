@@ -1,0 +1,78 @@
+$blue:#33c1e3;
+$gray:#727272;
+$red:#e85f61;
+$white:#f6f6f6;
+$darkgray:#414141;
+$whitegray:#dedede;
+
+
+.footer{
+    background-color:$darkgray;
+}
+
+// .footer .container{
+//     height: 50px;
+//     @include phones{
+//         height: 115px;
+//     }
+// }
+
+.footer_left{
+    padding-top:rem(15px);
+    float:left;
+    width: 50%;
+    height: 100%;
+    @include phones{
+        width: 100%;
+        float:none;
+        text-align: center;
+        height:auto;
+    }
+
+    
+}
+
+.footer_left_text{
+    color:#9c9c9c;
+    @include fira(light);
+    
+}
+
+.footer_right{
+    float:left;
+    width: 50%;
+    height: 100%;
+    @include phones{
+        width: 100%;
+        float:none;
+        height:auto;
+    }
+}
+
+.footer_icons{
+    text-align: right;
+    vertical-align: middle;
+    margin-top:rem(10px);
+    @include phones{
+        text-align: center;
+    }
+}
+
+
+.footer_icon{
+    display: inline-block;
+    margin-right:rem(10px);
+   
+}
+
+.footer_icons_link{
+    display: block;
+   // height: 100px;
+   
+}
+.footer_img{
+    width:30px;  
+    height: 30px;
+    display: inline-block;
+    color:white;
+}

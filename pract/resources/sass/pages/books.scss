@@ -1,0 +1,110 @@
+$blue:#33c1e3;
+$gray:#727272;
+$red:#e85f61;
+$white:#f6f6f6;
+$darkgray:#414141;
+$whitegray:#dedede;
+
+.books_title{
+    margin-left:rem(230px);
+
+    @include tablets{
+        margin-left:0;
+    }
+    
+    h1{
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom:rem(20px);
+        display:block;
+        color:$darkgray;
+        @include phones{
+            text-align: center;
+        }
+    }
+}
+
+.books_item{
+    display: inline-block;
+    text-align: left;
+    //vertical-align: top;
+    margin-bottom:20px;
+    width: 31%;
+    @include phones{
+        width:300px;
+        display: block;
+    }
+}
+
+.books_item:not(:nth-child(3n)){
+    margin-right: rem(20px);
+    @include phones{
+        margin-right:0;
+    }
+  }
+
+.books_item:hover{
+    .books_block_name{
+        color:$blue;
+    }
+}
+
+
+.shadow_block{
+    box-shadow:0 1px 3px 0 #d5d5d5;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.books_img{
+    display:block;
+    max-width: 100%;
+    
+    
+}
+
+.books_block_text{
+    
+    padding:20px;
+    box-sizing: border-box;
+}
+
+// .portfolio_block_padding{
+//     padding:20px;
+// }
+
+.books_block_name{
+    color:$darkgray;
+    font-size: 21px;
+
+}
+
+.books_block_title{
+    color:$darkgray;
+    font-size: 14px;
+    @include fira(light);
+}
+
+
+
+.books_block_work{
+    margin-top:20px;
+    font-size:14px;
+    font-weight: bold;
+    color:$darkgray;
+    display: inline-block;
+}
+
+.books_block_workname{
+    display: inline-block;  
+}
+
+.quest{
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+    color:$darkgray;
+    &:hover{
+        color:$red;
+    }
+}

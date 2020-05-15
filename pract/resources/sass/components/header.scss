@@ -1,0 +1,95 @@
+$blue:#33c1e3;
+$gray:#727272;
+$red:#e85f61;
+$white:#f6f6f6;
+$darkgray:#414141;
+$whitegray:#dedede;
+
+
+.header{
+    vertical-align: middle;
+    color:#414141;
+    background-color:#ffff;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    padding:rem(8px) 0px;
+    font-size:18px;
+    font-family: Fira Sans Regular, sans-serif, Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin-bottom:25px;
+    .adaptive{
+        display: none;
+    }
+    @include phones{
+        font-size: 14px;
+        .adaptive{
+            display:inline-block;
+            font-size: 30px;
+        }
+    }
+    
+}
+
+
+.container{
+    padding: 0 ;
+}
+
+.header_left{
+    float:left;
+    width: 50%;
+}
+
+.user_link{
+    text-decoration: none;
+    color:#414141;
+    vertical-align: middle;
+}
+
+.user_username{
+    @include phones{
+        width: rem(95px);
+    }
+}
+
+.user_avatar{
+    border-radius: 50%;
+    border:2px solid $whitegray; 
+    width: rem(60px);
+    height: rem(60px);
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    margin-right:10px;
+}
+
+.user_username{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header_right{
+    width: 50%;
+    text-align: right;
+    vertical-align: middle;
+    display:inline-block;
+    text-align: right;
+    padding-top:rem(15px);
+}
+
+.quest{
+    vertical-align: middle;
+    height: 50%;
+    display:inline-block;
+    //border-bottom:1.6px dotted;
+    color: $darkgray;   
+    position: relative;
+}
+
+.link_git{
+    text-decoration:none;
+    color:$darkgray;
+    &:hover{
+        color:$blue;
+    }
+}

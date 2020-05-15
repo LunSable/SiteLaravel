@@ -1,0 +1,94 @@
+$blue:#33c1e3;
+$gray:#727272;
+$red:#e85f61;
+$white:#f6f6f6;
+$darkgray:#414141;
+$whitegray:#dedede;
+
+
+
+.sidebar{
+    float:left;
+    width: 22%;
+    font-size:18px;
+    @include tablets{
+        width:100%;
+        float:none;
+        margin-bottom:rem(25px);
+        font-size:16px;
+    }
+        
+    @include phones{
+        width:100%;
+        float:none;
+        margin-bottom:rem(25px);
+        i{
+            display: none;
+        }
+        font-size:14px;
+    }
+
+    
+    
+}
+
+
+.sidebar_item{
+    @include tablets{
+        display: inline-block;
+        //margin-right:10px;
+    }
+    @include phones{
+        display: inline-block;
+        //margin-right:10px;
+    }
+}
+
+.sidebar_link{
+    text-decoration: none;
+    color:$darkgray;
+    display: block;
+    padding:rem(10px) rem(20px) rem(10px) rem(0px);
+    border-right:5px solid transparent;
+
+    &:hover{
+        border-color:$darkgray;
+    }
+
+    @include tablets{
+        border:none;
+    }
+    @include phones{
+        border: none;
+    }
+   
+}
+
+.sidebar_link:hover .sidebar_icon {
+    color:$darkgray;
+
+}
+.sidebar_link:hover .sidebar_text{
+    color:$darkgray;
+
+}
+
+.sidebar_link_active .sidebar_text{
+    font-weight: bold;
+    color:$blue;
+}
+.sidebar_link_active{
+    border-color:$blue;
+}
+.sidebar_link_active .sidebar_icon{
+    font-weight: bold;
+    color:$blue;
+}
+.sidebar_item{
+    text-align: right;
+}
+
+.sidebar_icon {
+    margin-right:rem(5px);
+}
+

@@ -1,0 +1,108 @@
+.admin_list{
+    text-align: left;
+}
+
+.admin_button_block{
+    margin-bottom: 15px;
+}
+
+.admin_link{
+    text-decoration: none;
+    color:$darkgray;
+    font-size: 20px;
+    &:hover{
+        color:$blue;
+    }
+    padding:8px;
+}
+
+.admin_text{
+    border-radius: 5px;
+    color:$darkgray;
+    height: 30px;
+    width: 150px;
+    border-color: $darkgray;
+}
+
+.admin_field{
+    color:$darkgray;
+    font-size: 25px;
+}
+
+.admin_button{
+    border-radius: 50px;
+    color:$darkgray;
+    border-color: $darkgray;
+    background-color: $white;
+    font-size: 20px;
+    display:inline-block;
+    margin-right:20px;
+    padding: 8px;
+    min-width: 150px;
+    &:hover{
+        background-color: $darkgray;
+        color:$blue;
+    }
+    
+}
+.login{
+    padding: 2px;
+    min-width: 100px;
+}
+
+.block_button{
+    text-align: left;
+    margin-top: 25px;
+    display:inline-block;
+}
+
+.admin_block_two{
+    float:right;
+    border:1px solid $darkgray;
+    padding:10px;
+    border-radius: 20px;
+}
+.admin_block{
+    float:left;
+}
+
+.books_block_work_left{
+    float:left;
+}
+
+.books_block_work_right{
+    float:left;
+}
+
+.link_ch{
+    font-size: 15px;
+    &:hover{
+        color:$red;
+    }
+}
+.admin_block-left{
+    float:right;
+}
+.admin_block_name{
+    font-size: 25px;
+    color:$darkgray;
+    margin-bottom: 20px;
+}
+
+.link_back{
+    text-decoration: none;
+    color:$darkgray;
+    border-radius:20px;
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid $darkgray;
+    background-color: $white;
+    border:1px solid $darkgray;
+    &:hover{
+        color:$blue;
+        background-color: $darkgray;
+        text-decoration: none;
+        
+    }
+
+}
