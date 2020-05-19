@@ -47,17 +47,19 @@
                                     <label class="form-check-label" for="remember">
                                         {{ __('Запомнить меня') }}
                                     </label>
+                                    <a href="/register" class="link_reg">Регистрация</a>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="admin_button login">
-                                    {{ __('Войти') }}
-                                </button>
-                                <a href="../" class="link_back">Вернуться</a>
-
+                                <div class="btn_block">
+                                    <button type="submit" class="admin_button login">
+                                        {{ __('Войти') }}
+                                    </button>
+                                    <a href="../" class="link_back">Вернуться</a>
+                                </div>
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 
 use Closure;
 
-class checkadmin
+class checkmoder
 {
     /**
      * Handle an incoming request.
@@ -17,10 +17,11 @@ class checkadmin
     public function handle($request, Closure $next)
     {
         $user= Auth::user();
-        if($user->idRole==3){
+        if($user->idRole==2||$user->idRole==3){
             return $next($request);
             
         }
         return redirect(route('index'));
     }
+
 }

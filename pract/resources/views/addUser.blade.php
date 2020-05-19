@@ -32,13 +32,7 @@
                 </div>
 
                 <div class="header_right">
-                    @guest
-                    <a href="/register" class="quest">Регистрация</a>
-                    <a href="/login" class="quest">Войти</a>
-                    @endguest
-                    @auth
-                    <a href="{{route('get-logout')}}" class="quest">Выйти</a>
-                    @endauth
+                    <div class="quest">REST_API</div>
                 </div>
             </div>
         </header>
@@ -73,7 +67,7 @@
                  </aside>
 
                 <div class="books_title clearfix">
-                    <h1>Редактирование</h1>
+                    <h1>Добавление</h1>
                     @if($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -84,11 +78,21 @@
                         </div>
                     @endif
                     <div class="admin_block">
-                        <form action="{{route('author-change-yes', $data->id)}}" class="form_admin_add" method="post">
+                        <form action="/submit/add/user" class="form_admin_add" method="post">
                             @csrf
-
-                            <div class="name_field admin_field">ФИО Автора:</div>
-                            <input type="text" value="{{$data->name_author}}" class="name_input admin_text" name="author_name" id="author_name">
+                            <div class="name_field admin_field">Логин:</div>
+                            <input type="text" class="name_input admin_text" name="login">
+                            <div class="author_field admin_field">Почта:</div>
+                            <input type="text" class="name_input admin_text" name="email">
+                            <div class="author_field admin_field">Пароль:</div>
+                            <input type="text" class="name_input admin_text" name="pass">
+                            <div class="author_field admin_field">Роль:</div>
+                            <select class="author_input admin_text" name="idRole" >
+                                @foreach ($roles as $role)
+                                    
+                                    <option value="{{$role->id}}" class="author_name"  id="idAuthor">{{$role->name}}</option>
+                                @endforeach
+                            </select>
                             <br>
                             <div class="block_button">
                                 <button class="add_button admin_button" type="submit">Сохранить</button>
@@ -96,7 +100,7 @@
                             </div>    
                         </form>
                     </div>
-            </div>
+            </div>RolesSeeder
         </main>
 
         </div>

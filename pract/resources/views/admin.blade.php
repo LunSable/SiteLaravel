@@ -75,26 +75,68 @@
                 <div class="books_title clearfix">
                     <h1>Меню управления</h1>
                     <div class="admin_block">
-                            <div class="admin_block_name">Книги</div>
-                            <ul class="admin_list">
-                                <li class="admin_button_block">
-                                    <i class="fas fa-plus"></i>
-                                    <a href="/add" class="admin_link">Добавить</a>
-                                </li>
-                                <li class="admin_button_block">
-                                    <i class="fas fa-exchange-alt"></i>
-                                    <a href="/change" class="admin_link">Редактировать и удалить</a>
-                                </li>
-                            </ul>
+                        <div class="admin_content">
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                            Контент:
+                        </div>
+                        <div class="admin_menu">
+                            <div class="admin_books">
+                                <div class="admin_block_name">Книги</div>
+                                <ul class="admin_list">
+                                    <li class="admin_button_block">
+                                        <i class="fas fa-plus"></i>
+                                        <a href="/add" class="admin_link">Добавить</a>
+                                    </li>
+                                    <li class="admin_button_block">
+                                        <i class="fas fa-exchange-alt"></i>
+                                        <a href="/change" class="admin_link">Редактировать и удалить</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="admin_authors">
+                                <div class="admin_block_name">Авторы</div>
+                                <ul class="admin_list">
+                                    <li class="admin_button_block">
+                                        <i class="fas fa-plus"></i>
+                                        <a href="/add/author" class="admin_link">Добавить</a>
+                                    </li>
+                                    <li class="admin_button_block">
+                                        <i class="fas fa-exchange-alt"></i>
+                                        <a href="/author/change" class="admin_link">Редактировать и удалить</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="admin_block-left">
-                            <div class="admin_block_name">Авторы</div>
-                            <ul class="admin_list">
-                                <li class="admin_button_block">
-                                    <i class="fas fa-exchange-alt"></i>
-                                    <a href="/author/change" class="admin_link">Редактировать и удалить</a>
-                                </li>
-                            </ul>
+                    <div class="admin_users">
+                    <div class="admin_content">
+                        <i class="fa fa-id-card" aria-hidden="true"></i>    
+                        Пользователи:
+                    </div>
+                        <div class="admin_root admin_menu">
+                            <div class="admin_roots">
+                                <div class="admin_block_name">Права пользователей</div>
+                                <ul class="admin_list">
+                                    <li class="admin_button_block">
+                                        <i class="fas fa-plus"></i>
+                                        <a href="/add/role" class="admin_link">Добавить роль</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="admin_users_block">
+                            <div class="admin_block_name">Пользователи</div>
+                                <ul class="admin_list">
+                                    <li class="admin_button_block">
+                                        <i class="fas fa-plus"></i>
+                                        <a href="/add/user" class="admin_link">Добавить пользователя</a>
+                                    </li>
+                                    <li class="admin_button_block">
+                                        <i class="fa fa-user-secret" aria-hidden="true"></i>
+                                        <a href="/roles" class="admin_link">Редактировать и удалить</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
             </div>
         </main>
@@ -104,7 +146,7 @@
         <footer class="footer ">
             <div class="container clearfix">
                 <div class="footer_left">
-                    <div class="footer_left_text">Для третьего задания по пратике</div>
+                    <div class="footer_left_text">Для третьего задания по практике</div>
                 </div>
                 <div class="footer_right">
                     <div class="footer_right_icons">

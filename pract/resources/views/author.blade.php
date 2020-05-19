@@ -61,19 +61,21 @@
                                 </a>
                             </li>
                             @auth
+                            @if(!(Auth::user()->idRole==1))
                             <li class="sidebar_item">
                                 <a href="/admin" class="sidebar_link">
                                     <i class="fa fa-user-circle sidebar_icon" aria-hidden="true"></i>
                                     <span class="sidebar_text">Админ меню</span>
                                 </a>
                             </li>
+                            @endif
                             @endauth
                         </ul>
                     </nav>
                  </aside>
 
                 <div class="books_title clearfix">
-                    <h1>Книги</h1>
+                    <h1>Авторы</h1>
                     <div class="books_blocks">
 
                         <ul class="books_list clearfix ">
@@ -107,7 +109,7 @@
         <footer class="footer ">
             <div class="container clearfix">
                 <div class="footer_left">
-                    <div class="footer_left_text">Для третьего задания по пратике</div>
+                    <div class="footer_left_text">Для третьего задания по практике</div>
                 </div>
                 <div class="footer_right">
                     <div class="footer_right_icons">

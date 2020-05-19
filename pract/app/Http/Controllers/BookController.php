@@ -30,13 +30,19 @@ class BookController extends Controller
         $author=new Author;
         $author->name_author=$req->input('author_name');
         $author->save();
-        return view('add',['authors' => $authors]);
+        return view('addAuthor',['authors' => $authors]);
     }
 
     public function AllData(){
         $authors=Author::all();
         return view('add',['authors' => $authors]);
     }
+
+    public function AllDataAuthor(){
+        $authors=Author::all();
+        return view('addAuthor',['authors' => $authors]);
+    }
+
 
     public function AllView(){
         $books=Books::all();

@@ -117,7 +117,7 @@
         <footer class="footer ">
             <div class="container clearfix">
                 <div class="footer_left">
-                    <div class="footer_left_text">Для третьего задания по пратике</div>
+                    <div class="footer_left_text">Для третьего задания по практике</div>
                 </div>
                 <div class="footer_right">
                     <div class="footer_right_icons">

@@ -94,15 +94,44 @@
     color:$darkgray;
     border-radius:20px;
     font-size: 20px;
-    padding: 5px;
-    border: 1px solid $darkgray;
+    padding: 2px;
+    border: 2px solid $darkgray;
     background-color: $white;
-    border:1px solid $darkgray;
     &:hover{
         color:$blue;
         background-color: $darkgray;
-        text-decoration: none;
-        
+        text-decoration: none;  
     }
+    min-height: 38px;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.admin_users{
+    float: right;
+}
+
+.admin_content{
+    font-size: 28px;
+    color: $darkgray;
+}
+
+.admin_menu{
+    border:1px solid $darkgray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.link_reg{
+    text-decoration: none;
+    &:hover{
+        color:$red;
+        text-decoration: none; 
+    }
+    display: block;
+    color: $darkgray;
+}
+
+.btn_block{
 
 }

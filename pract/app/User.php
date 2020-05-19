@@ -38,6 +38,14 @@ class User extends Authenticatable
     ];
 
     public function isAdmin(){
-        return $this->email==='vadim1019@yandex.ru';
+        return $this->idRole=='3';
+    }
+    public function isModerator(){
+        return $this->idRole=='2';
+    }
+
+    public function role()
+    {
+        return $this->belongsTo('App\roles','idRole','id');
     }
 }

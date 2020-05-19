@@ -32,13 +32,7 @@
                 </div>
 
                 <div class="header_right">
-                    @guest
-                    <a href="/register" class="quest">Регистрация</a>
-                    <a href="/login" class="quest">Войти</a>
-                    @endguest
-                    @auth
-                    <a href="{{route('get-logout')}}" class="quest">Выйти</a>
-                    @endauth
+                    <div class="quest">REST_API</div>
                 </div>
             </div>
         </header>
@@ -73,7 +67,7 @@
                  </aside>
 
                 <div class="books_title clearfix">
-                    <h1>Редактирование</h1>
+                    <h1>Добавление</h1>
                     @if($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -84,11 +78,12 @@
                         </div>
                     @endif
                     <div class="admin_block">
-                        <form action="{{route('author-change-yes', $data->id)}}" class="form_admin_add" method="post">
+                        <form action="/submit/add/role" class="form_admin_add" method="post">
                             @csrf
-
-                            <div class="name_field admin_field">ФИО Автора:</div>
-                            <input type="text" value="{{$data->name_author}}" class="name_input admin_text" name="author_name" id="author_name">
+                            <div class="name_field admin_field">ИД Роли:</div>
+                            <input type="text" class="name_input admin_text" name="id_role" id="id_role">
+                            <div class="name_field admin_field">Название роли:</div>
+                            <input type="text" class="name_input admin_text" name="role_name" id="role_name">
                             <br>
                             <div class="block_button">
                                 <button class="add_button admin_button" type="submit">Сохранить</button>

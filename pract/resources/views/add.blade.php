@@ -100,19 +100,7 @@
                             </div>    
                         </form>
                     </div>
-                    <div class="admin_block_two">
-                        <form action="/submit/add/author" class="form_admin_add" method="post">
-                            @csrf
-                            <div class="name_field admin_field">ФИО Автора:</div>
-                            <input type="text" class="name_input admin_text" name="author_name" id="author_name">
-                            <br>
-                            <div class="block_button">
-                                <button class="add_button admin_button" type="submit">Сохранить</button>
-                                <button class="reset_button admin_button" type="reset">Очистить</button>
-                            </div>    
-                        </form>
-                    </div>
-            </div>
+            </div>RolesSeeder
         </main>
 
         </div>
@@ -120,7 +108,7 @@
         <footer class="footer ">
             <div class="container clearfix">
                 <div class="footer_left">
-                    <div class="footer_left_text">Для третьего задания по пратике</div>
+                    <div class="footer_left_text">Для третьего задания по практике</div>
                 </div>
                 <div class="footer_right">
                     <div class="footer_right_icons">

@@ -55,7 +55,7 @@
                                 </a>
                             </li>
                             <li class="sidebar_item">
-                                <a href="/author" class="sidebar_link">
+                                <a href="/author" class="sidebar_link s">
                                     <i class="fa fa-users sidebar_icon" aria-hidden="true"></i>
                                     <span class="sidebar_text">Авторы книг</span>
                                 </a>
@@ -73,29 +73,40 @@
                  </aside>
 
                 <div class="books_title clearfix">
-                    <h1>Редактирование</h1>
-                    @if($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach($errors->all() as $error)
-                                    <li>{{$error }}</li>
-                                @endforeach
-                                </ul>
-                        </div>
-                    @endif
-                    <div class="admin_block">
-                        <form action="{{route('author-change-yes', $data->id)}}" class="form_admin_add" method="post">
-                            @csrf
+                    <h1>Пользователи</h1>
+                    <div class="books_blocks">
 
-                            <div class="name_field admin_field">ФИО Автора:</div>
-                            <input type="text" value="{{$data->name_author}}" class="name_input admin_text" name="author_name" id="author_name">
-                            <br>
-                            <div class="block_button">
-                                <button class="add_button admin_button" type="submit">Сохранить</button>
-                                <button class="reset_button admin_button" type="reset">Очистить</button>
-                            </div>    
-                        </form>
+                        <ul class="books_list clearfix ">
+                            @foreach($users as $user)
+                            <li class="books_item">
+                                <div class="books_block">
+                                    <div class="shadow_block">
+                                        <img src="/IMG/Portfolio/deals app.jpg" alt="" class="portfolio_img">
+                                        <div class="books_block_text">
+                                            <div class="books_block_padding">
+                                                <div class="books_block_name">{{$user->name}}</div>
+                                                <div class="books_block_title">{{$user->email}}</div>
+                                                <div class="books_block_work">
+                                                    <i class="fas fa-user-tag"></i>
+                                                    <div class="books_block_workname">{{$user->role->name}}</div>
+                                                    <div class="books_block_work_right">
+                                                        <i class="fas fa-exchange-alt"></i>
+                                                        <a href="{{route('role-change', $user->id)}}" class="admin_link link_ch">Редактировать</a>
+                                                    </div>  
+                                                    <div class="books_block_work_right">
+                                                        <i class="fas fa-trash"></i>
+                                                        <a href="{{route('user-delete', $user->id)}}" class="admin_link link_ch">Удалить</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            @endforeach
+                        </ul>
                     </div>
+                </div>
             </div>
         </main>
 
